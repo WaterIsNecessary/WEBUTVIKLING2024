@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ongoing Practice Assignment</title>
+</head>
+<body>
+
+    <header>
+
+        <h1>Welcome to my assignment website</h1>        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="valideringsSide.html">Validation Assignment</a></li>
+                <li><a href="template.html">Template</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>            
+        </nav>
+
+    </header>    
+
+    <main>
+
+        <section>
+            
+            <h2>Here is your registration form</h2>
+
+            <form action="" method="post">
+
+                <label for="name">Name:</label>
+                <input type="text" placeholder="name" id="name" pattern="[A-Za-zæøåÆØÅ ]{2,}">
+
+                <label for="email">Email:</label>
+                <input type="email" placeholder="email@somemail.com" id="email" required>
+
+                <label for="pwd">Password:</label>
+                <input type="password" placeholder="12345678" id="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
+                <label for="age">Age:</label>
+                <input type="number" placeholder="39" id="age" min="18" max="99" required>
+
+                <label for="telp">Telephone number:</label>
+                <input type="tel" placeholder="12345678" id="telp" pattern="[0-9]{8,12}" required>
+
+                <label for="dob">Date of birth:</label>
+                <input type="date" value="dob" id="dob" max="2023-12-31" required>
+
+                <fieldset>
+
+                    <legend>Gender</legend>
+
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male">
+
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female">
+
+                    <label for="other">Other</label>
+                    <input type="radio" name="gender" id="other">
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Country</legend>
+
+                    <select name="Country" required>
+
+                        <option value="nor">Norway</option>
+                        <option value="swe">Sweden</option>
+                        <option value="dn">Denmark</option>
+
+                    </select>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Privacy policy</legend>
+
+                    <label for="accept">I accept the terms of service</label>
+                    <input type="checkbox" value="accept" id="accept" required>
+
+                </fieldset>
+
+                <button type="submit">Submit</button>
+
+            </form>
+            
+            
+        </section>
+    
+    </main>    
+
+    <footer>
+
+        <p>Contact me at: <a href="mailto:dummyadd@email.com">Email</a></p>
+        <h1>&copy; 2024 L R</h1>
+
+    </footer>
+    
+</body>
+</html>
