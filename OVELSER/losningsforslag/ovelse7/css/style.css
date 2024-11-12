@@ -1,0 +1,258 @@
+/* Setter standard box-sizing for alle elementer til border-box for å sikre at padding og border inkluderes i elementets totale bredde/høyde */
+*{
+    box-sizing: border-box;
+}
+
+/* Definerer grunnleggende styling for html-elementet */
+html{
+    /* (Ingen spesifikke innstillinger, kan legges til for ytterligere tilpasning) */
+}
+
+/* Setter fontfamilien for body, gjelder for hele dokumentet */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styling for header, som inneholder seksjonen for å strukturere innhold */
+header {
+
+    /* Styling for seksjonen i headeren, som gir rom rundt innholdet for bedre lesbarhet */
+    section{
+        padding: 3rem;
+    }
+}
+
+/* Styling for navigasjonsmenyen i header */
+nav {
+    /* Bruker flexbox for å arrangere navigasjonsinnholdet i en kolonnevertikal struktur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* Setter bakgrunnsfarge for navigasjonsmenyen */
+    background-color: #efefef;
+
+    /* Gir rom rundt innholdet for bedre avstand */
+    padding: 1rem;
+
+    /* Styling for logoen i navigasjonen, med spesifikasjoner for typografi og farge */
+    #logo{
+        font-size: 25px; /* Øker skriftstørrelsen for tydelighet */
+        margin-bottom: 1rem; /* Avstand under logo for bedre struktur */
+        font-weight: 900; /* Setter tykkere skrift */
+        letter-spacing: -5px; /* Reduserer mellomrom mellom bokstaver */
+        text-decoration: none; /* Fjerner understreking */
+        color: #000; /* Setter fargen til svart */
+    }
+
+    /* Styling for ul-elementet inne i nav, som viser navigasjonslenker i kolonne */
+    ul{
+        display: flex;
+        flex-direction: column; /* Vertikal layout for lenker */
+        padding: 0; /* Fjerner standard padding */
+        margin: 0; /* Fjerner standard margin */
+        list-style: none; /* Fjerner punktmerking */
+        text-align: center; /* Sentrerer tekst for bedre lesbarhet */
+
+        /* Styling for hvert list-element i navigasjonen */
+        li{
+            /* Styling for lenker i listen */
+            a{
+                padding: 0.5rem 1rem; /* Rom rundt lenketeksten */
+                display: inline-block; /* Gjør lenken klikkbar som en blokk */
+                text-decoration: none; /* Fjerner understreking */
+                color: #000; /* Setter fargen til svart */
+            }
+        }
+    }
+}
+
+/* Styling for hovedinnholdet i main-elementet */
+main{
+    display: flex; /* Bruker flexbox for fleksibel layout */
+    flex-wrap: wrap; /* Tillater innhold å brytes om nødvendig */
+
+    /* Mørk bakgrunn og hvit tekst for seksjoner med odd plassering */
+    section:nth-child(odd){
+        background-color: #1e4772; /* Mørk blå bakgrunn */
+        color: #fff; /* Hvit tekst for kontrast */
+    }
+
+    /* Styling for seksjonene inne i main */
+    section{
+        display: flex; /* Bruker flexbox for fleksibel layout */
+        flex-wrap: wrap; /* Tillater innhold å brytes om nødvendig */
+
+        /* Styling for figure-elementet i seksjoner */
+        figure{
+            flex-basis: 50%; /* Setter standardbredde til 50% */
+            margin: 0; /* Fjerner margin for en kompakt layout */
+            flex-grow: 1; /* Tillater fleksibel vekst i bredde */
+            min-width: 340px; /* Setter minimumsbredde for responsivitet */
+
+            /* Styling for bilder i figure for å fylle hele bredden og høyden */
+            img{
+                width: 100%; /* Bildet fyller bredden til figure */
+                height: 100%; /* Bildet fyller høyden til figure */
+            }
+        }
+
+        /* Styling for nested section, som brukes til tekstinnhold */
+        section{
+            padding: 0rem 3rem; /* Horisontal padding for rom rundt tekst */
+            flex-basis: 50%; /* Setter standardbredde til 50% */
+            flex-grow: 1; /* Tillater fleksibel vekst i bredde */
+            align-content: center; /* Sentrerer innhold vertikalt */
+        }
+    }
+}
+
+/* Styling for .btn, en generell knapp-stil */
+.btn{
+    display: inline-block; /* Gir knappen inline-blokk oppførsel */
+    padding: 1rem; /* Rom rundt knappeteksten */
+    border: 1px solid #fff; /* Hvit kantlinje */
+    color: #fff; /* Hvit tekst for kontrast */
+    text-decoration: none; /* Fjerner understreking */
+    margin: 1rem 0; /* Vertikal margin for avstand fra annet innhold */
+}
+
+/* Styling for #tjenester-seksjonen, som inneholder artikler */
+#tjenester{
+    padding: 3rem; /* Rom rundt innholdet for bedre avstand */
+    display: flex; /* Bruker flexbox for fleksibel layout */
+    flex-wrap: wrap; /* Tillater innhold å brytes om nødvendig */
+    gap: 2rem; /* Avstand mellom artikler for bedre struktur */
+
+    /* Styling for artikler inne i #tjenester */
+    article {
+        background-color: #efefef; /* Lys grå bakgrunn */
+        padding: 2rem; /* Rom rundt innhold i artikkel */
+        flex-basis: 250px; /* Standardbredde for artikler */
+        flex-grow: 1; /* Tillater artikler å vokse i bredde om nødvendig */
+    }
+
+    /* Ekstra styling for #booking-artikkel */
+    #booking{
+        background-color: #1e4772; /* Mørk blå bakgrunn */
+        color: #fff; /* Hvit tekst for kontrast */
+    }
+}
+
+/* Styling for #change-order-seksjonen for å endre rekkefølge */
+#change-order{
+    flex-direction: row; /* Justerer layout horisontalt */
+
+    /* Endrer rekkefølge på figure og section */
+    figure{
+        order: 1; /* Første posisjon */
+    }
+    section{
+        order: 2; /* Andre posisjon */
+    }
+}
+
+/* Styling for footer-seksjonen, som inneholder footer-seksjoner */
+footer{
+    background-color: #383735; /* Mørk bakgrunn for kontrast */
+    color: #fff; /* Hvit tekst for bedre lesbarhet */
+    display: flex; /* Flexbox for fleksibel layout */
+    flex-wrap: wrap; /* Tillater innhold å brytes ved behov */
+    padding: 3rem; /* Rom rundt innholdet */
+
+    /* Styling for seksjoner inne i footer */
+    section{
+        flex-basis: 50%; /* Standardbredde for seksjoner */
+        flex-grow: 1; /* Tillater seksjoner å vokse om nødvendig */
+        min-width: 300px; /* Setter minimumsbredde for responsivitet */
+    }
+
+    /* Styling for footer-logo */
+    #footer-logo{
+        width: 100%; /* Full bredde */
+        font-size: 25px; /* Stor skrift for logoen */
+        margin-bottom: 1rem; /* Avstand under logoen */
+        font-weight: 900; /* Tykkere skrift */
+        letter-spacing: -5px; /* Mindre bokstavavstand */
+        text-decoration: none; /* Fjerner understreking */
+        color: #ffffff; /* Hvit farge */
+    }
+
+    /* Felles styling for lenker i footer */
+    a{
+        color: #fff; /* Hvit farge for kontrast */
+    }
+
+    /* Styling for ul-lister inne i footer */
+    ul{
+        list-style: none; /* Fjerner punktmerking */
+        padding: 0; /* Fjerner padding */
+        margin: 0; /* Fjerner margin */
+
+        /* Styling for hvert list-element */
+        li{
+            padding: 1rem 0; /* Vertikal avstand mellom elementene */
+            display: flex; /* Flex for layout */
+            gap: 1rem; /* Avstand mellom elementer */
+        }
+    }
+}
+
+/* Gir h2 full bredde */
+h2{
+    width: 100%; /* Full bredde for h2-elementer */
+}
+
+/* Styling for #some (sosiale medier-ikonene) */
+#some{
+    display: flex; /* Flexbox for horisontal layout */
+    list-style: none; /* Fjerner punktmerking */
+    margin: 0; /* Fjerner margin */
+    padding: 0; /* Fjerner padding */
+    gap: 1rem; /* Avstand mellom ikoner */
+
+    /* Styling for ikoner inne i #some */
+    i{
+        font-size: 40px; /* Stor skriftstørrelse for ikoner */
+    }
+}
+
+/* Media query for skjermer som er bredere enn 680px */
+@media only screen and (min-width: 680px) {
+    /* Tilpasser header for større skjermer */
+    header {
+        padding: 3rem; /* Økt padding */
+        background-color: #efefef;
+
+        /* Justerer nav for horisontal layout */
+        nav{
+            flex-direction: row; /* Horisontal layout */
+            align-items: baseline; /* Justerer elementer langs baseline */
+            justify-content: space-between; /* Plasserer elementer i ytterpunktene */
+            padding: 0; /* Fjerner padding */
+
+            /* Endrer ul-lister til horisontal layout */
+            ul{
+                flex-direction: row;
+            }
+        }
+
+        /* Fjerner padding i seksjoner for en kompakt visning */
+        section{
+            padding: 0;
+        }
+    }
+
+    /* Endrer rekkefølgen på elementene i #change-order */
+    #change-order{
+        flex-direction: row; /* Horisontal layout */
+        
+        figure{
+            order: 2; /* Plasseres etter section */
+        }
+
+        section{
+            order: 1; /* Plasseres før figure */
+        }
+    }
+}

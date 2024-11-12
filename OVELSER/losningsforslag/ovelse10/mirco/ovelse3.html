@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microdata - bok</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Passions+Conflict&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container{
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        #page-header{
+            background-color: brown;
+            color: #fff;
+        }
+        header nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .article-content{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .article-content section{
+            width: 70%;
+        }
+
+        .article-content figure{
+            width: 30%;
+            margin: 0;
+        }
+        h2{
+            margin: 0;
+        }
+        main{
+            padding: 2rem 0;
+        }
+        .breadcrumbs {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .breadcrumbs li{
+            display: inline-block;
+        }
+        .breadcrumbs li a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Hovedinnholdet er definert som en bok med itemscope for microdata -->
+    <header id="page-header">
+        <nav class="container">
+            <!-- Brødsmulesti med mikrodata for navigasjonsbanen -->
+            <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="#" itemprop="item">
+                        <span itemprop="name">Eventyr</span>
+                    </a>
+                    <meta itemprop="position" content="1" /> <!-- Angir posisjon i brødsmulestien -->
+                </li>
+                >
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="#" itemprop="item">
+                        <span itemprop="name">Witcher</span>
+                    </a>
+                    <meta itemprop="position" content="2" />
+                </li>
+                >
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <b><a href="#" itemprop="item">
+                        <span itemprop="name">Tower of the Swallow</span>
+                    </a></b>
+                    <meta itemprop="position" content="3" />
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container"> 
+        <nav>
+            <ul class="breadcrumbs">
+                <li><a href="#">Eventyr ></a></li>
+                <li><a href="#">Witcher ></a></li>
+                <li><b><a href="#">Tower of the Swallow</a></b></li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Definerer innholdet som en bok ved bruk av schema.org microdata -->
+            <article class="article-content" itemscope itemtype="https://schema.org/Book">
+                <figure>
+                    <!-- Bildet av boken, angitt som itemprop="image" for å knytte bildet til boken -->
+                    <img src="https://s1.adlibris.com/images/56720886/tower-of-the-swallow.jpg" alt="bilde av witcher bok" itemprop="image">
+                </figure>
+                <section>
+                    <header>
+                        <!-- Tittel på boken, spesifisert med itemprop="name" for å identifisere boktittelen -->
+                        <h2 itemprop="name">Tower of the Swallow</h2>
+                        <span>- pocket, Engelsk, 2020</span>
+                    </header>
+                    <!-- Forfatteren av boken, definert som en Person under itemprop="author" -->
+                    <p itemprop="author" itemscope itemtype="https://schema.org/Person">Forfatter:
+                        <span itemprop="name">Andrzej Sapkowski</span>
+                    </p>
+                    <!-- Prisinformasjon for boken -->
+                    <span id="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="NOK">
+                        <meta itemprop="price" content="199">199 NOK
+                    </span>
+                    <form>
+                        <fieldset>
+                            <label for="amount">Antall</label>
+                            <input type="number" max="10" min="1" name="amount" value="1" id="amount">
+                            <button>Legg i handlekurv</button>
+                        </fieldset>
+                    </form>
+                    <article>
+                        <h4>Beskrivelse</h4>
+                        <!-- Kort beskrivelse av boken, definert som itemprop="description" for å gi en oppsummering -->
+                        <p itemprop="description">The world is at war and the prophesied saviour is missing in the fourth novel in the New York Times bestselling Witcher series that inspired the #1 most watched Netflix series of 2019</p>
+                    </article>
+                    <article>
+                        <h4>Produktinformasjon</h4>
+                        <table>
+                            <tr>
+                                <!-- Forfatter angitt som en Person under "author" -->
+                                <td>Forfatter: <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                    <span itemprop="name">Andrzej Sapkowski</span>
+                                </span></td>
+                                <!-- Vekt på boken, nyttig produktinformasjon -->
+                                <td>Vekt: <span itemprop="weight">324 gram</span></td>
+                            </tr>
+                            <tr>
+                                <!-- Undertittel til boken for ytterligere kontekst -->
+                                <td>Undertittel: <span itemprop="bookEdition">Witcher 4 - now a major Netflix show</span></td>
+                                <!-- Serien som boken tilhører -->
+                                <td>Serie: <span itemprop="isPartOf">The Witcher</span></td>
+                            </tr>
+                            <tr>
+                                <!-- ISBN-nummer for identifikasjon av boken -->
+                                <td>ISBN: <span itemprop="isbn">9781473231115</span></td>
+                                <!-- Utgivelsesdato for boken -->
+                                <td>Utgitt: <span itemprop="datePublished">2020-02-13</span></td>
+                            </tr>
+                            <tr>
+                                <!-- Språk boken er skrevet på -->
+                                <td>Språk: <span itemprop="inLanguage">Engelsk</span></td>
+                                <!-- Utgitt av forlaget Orion -->
+                                <td>Forlag: <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                    <span itemprop="name">Orion</span>
+                                </span></td>
+                            </tr>
+                            <tr>
+                                <!-- Totalt antall sider i boken -->
+                                <td colspan="2">Antall sider: <span itemprop="numberOfPages">464</span></td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+            </article>
+        </main>
+    </div>
+</body>
+</html>

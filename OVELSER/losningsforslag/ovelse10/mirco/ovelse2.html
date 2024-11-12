@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Microdata - VideoGamesSeries</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+		<style>
+		 #videogame {
+		    display: flex;
+		    flex-direction: column;
+		    max-width: 900px;
+		    margin: 0 auto;
+		    font-family: 'Roboto', sans-serif;
+		 }
+
+		 h1 {
+		 	text-transform: uppercase;
+		 }
+
+		 figure {
+		 	margin: 0;
+		 	padding: 0;
+		 }
+
+		 figcaption {
+		 	font-size: 10px;
+		 }
+
+		 ul {
+		 	list-style: none;
+		 	padding: 0;
+		 	margin: 0;
+		 }
+		</style>
+	</head>
+	<body>
+		<!-- Hovedinnhold definert som en VideoGameSeries med mikrodata -->
+		<main itemscope itemtype="https://schema.org/VideoGameSeries">
+			<section>
+				<!-- Tittelen på spillet, spesifisert som navn for VideoGameSeries -->
+				<h1 itemprop="name">Assassin's Creed Valhalla</h1>
+
+				<!-- Beskrivelse av spillet, angitt med itemprop="description" for søkemotorer -->
+				<p itemprop="description">
+					Become Eivor, a Viking raider raised to be a fearless warrior, and lead your clan from icy desolation in Norway to a new home amid the lush farmlands of ninth-century England. Find your settlement and conquer this hostile land by any means to earn a place in Valhalla.
+				</p>
+
+				<!-- Bilde relatert til spillet, definert med itemprop="image" for å hjelpe søkemotorer å vise dette som representasjonsbilde -->
+				<figure>
+					<img src="https://it.hiof.no/~ackarlse/microdata/creed.jpg" alt="Et bilde fra Assassin's Creed Valhalla" itemprop="image">
+					<figcaption>
+						<!-- Beskrivelse av bildet i figcaption for ytterligere kontekst -->
+						<span>Eivor</span> som kvinnelig karakter - Assassin's Creed Valhalla. Foto fra Ubisoft 
+					</figcaption>
+				</figure>
+
+				<!-- Spill informasjonseksjon for ytterligere detaljer -->
+				<h4>Spill informasjon</h4>
+				<ul>
+					<!-- Hovedstemmen til den mannlige karakteren, spesifisert som skuespiller (Person) -->
+					<li itemprop="actor" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name">Magnus Bruun</span> som stemmen til Eivor (M)
+					</li>
+					<!-- Hovedstemmen til den kvinnelige karakteren, spesifisert som skuespiller (Person) -->
+					<li itemprop="actor" itemscope itemtype="https://schema.org/Person">
+						<span itemprop="name">Cecilie Stenspil</span> som stemmen til Eivor (F)
+					</li>
+					<!-- Spillutvikler, definert med itemprop="creator" for å vise hvem som står bak utviklingen -->
+					<li itemprop="creator" itemscope itemtype="https://schema.org/Organization">
+						<span itemprop="name">Ubisoft</span> - Utvikler
+					</li>
+				</ul>
+			</section>
+		</main>
+	</body>
+</html>

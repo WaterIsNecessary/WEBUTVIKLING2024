@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Definerer tegnsettet som UTF-8 for å støtte spesialtegn -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gjør siden responsiv ved å sette visningsvinduet i forhold til enhetens bredde -->
+    
+    <!-- Importerer en CSS-reset for å sikre at stilene ser lik ut i forskjellige nettlesere -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    
+    <!-- Importerer Font Awesome ikoner for bruk i navigasjon og footer -->
+    <link href="ikoner/css/fontawesome.css" rel="stylesheet" />
+    <link href="ikoner/css/brands.css" rel="stylesheet" />
+    <link href="ikoner/css/solid.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css"> <!-- Hovedstilark for tilpassede stiler -->
+    
+    <title>Forside: øvelse 7</title> <!-- Sider-tittel, som vises i nettleserfanen -->
+</head>
+<body>
+    <!-- Header inneholder navigasjon og introduksjonstekst -->
+    <header>
+        <!-- Navigasjonsmeny -->
+        <nav>
+            <a href="index.html" id="logo">Logo</a> <!-- Logo som lenke til startsiden -->
+            <ul>
+                <!-- Navigasjonslenker -->
+                <li><a href="#">Hjem</a></li>
+                <li><a href="#">Tjenester</a></li>
+                <li><a href="#">Jobb</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Introduksjonsseksjon for hovedinnholdet med overskrift, tekst og lenke -->
+        <section>
+            <h1>Reduksjon av Plast: Enkle Steg for Mindre Avfall</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#">Ler mer om hvordan vi jobber <i class="fa-solid fa-arrow-right"></i></a> <!-- Lenke med ikon for visuell indikasjon -->
+        </section>
+    </header>
+
+    <!-- Hovedinnhold for siden -->
+    <main>
+        <!-- Første seksjon med bilde og tekst -->
+        <section>
+            <figure>
+                <!-- Bruker <picture> elementet for å gi forskjellige bilder for ulike skjermstørrelser -->
+                <picture>
+                    <!-- Viser større bilde for brede skjermer -->
+                    <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                    <!-- Viser middels størrelse bilde for mellomstore skjermer -->
+                    <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                    <!-- Standard bilde for små skjermer -->
+                    <img src="https://picsum.photos/300/300" alt="">
+                </picture>
+            </figure>
+            <!-- Seksjon med overskrift og tekst som forklarer temaet -->
+            <section>
+                <h2>Energisparing i Hverdagen: Hvordan Bruke Mindre Strøm</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" class="btn">Ta kontakt for en uforpliktende prat</a> <!-- Knapplignende lenke for å ta kontakt -->
+            </section>
+        </section>
+
+        <!-- Seksjon med omvendt rekkefølge for bilde og tekst, justeres i CSS for responsivt design -->
+        <section id="change-order">
+            <section>
+                <h2>Miljøvennlige Produkter: Hva Du Bør Velge</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+            <figure>
+                <picture>
+                    <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                    <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                    <img src="https://picsum.photos/300/300" alt="">
+                </picture>
+            </figure>
+        </section>
+
+        <!-- Tredje seksjon med bilde og tekstinnhold om resirkulering -->
+        <section>
+            <figure>
+                <picture>
+                    <source media="(min-width:650px)" srcset="https://picsum.photos/900/900">
+                    <source media="(min-width:465px)" srcset="https://picsum.photos/500/500">
+                    <img src="https://picsum.photos/300/300" alt="">
+                </picture>
+            </figure>
+            <section>
+                <h2>Gjenbruk og Resirkulering: Fra Avfall til Ressurser</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#" class="btn">Trenger du hjelp med å levere avfall til resirkulering?</a>
+            </section>
+        </section>
+
+        <!-- Tjenester-seksjon med flere artikler som beskriver forskjellige bærekraftige tilbud -->
+        <section id="tjenester">
+            <h2>Bærekraftige Tjenester for en Grønnere Hverdag: Miljøvennlige Alternativer innen Transport, Mote og Energi</h2>
+            
+            <!-- Artikler for hvert tjenestetilbud -->
+            <article>
+                <h3>Delingstjenester for sykler og elektriske scootere</h3>
+                <p>Tilby dine ansatte, innbyggere eller gjester et grønt alternativ med vår delingstjeneste for sykler og elektriske scootere.</p>
+            </article>
+            <article>
+                <h3>Secondhand klær og moteutleie</h3>
+                <p>Gjør bærekraftig mote til en del av din bedriftskultur eller arrangementer.</p>
+            </article>
+            <article>
+                <h3>Energirådgivning for bedrifter og kommuner</h3>
+                <p>Optimaliser energiforbruket og reduser kostnadene med våre profesjonelle energirådgivningstjenester.</p>
+            </article>
+            <article id="booking">
+                <h3>Book et møte</h3>
+                <p>Bestill et uforpliktende møte for å utforske hvilke av våre tjenester som kan være til nytte for deg</p>
+                <a class="btn" href="#">Book et møte i dag</a> <!-- Knapplignende lenke for booking av møte -->
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer-seksjon for generelle lenker og kontaktinformasjon -->
+    <footer>
+        <a href="#" id="footer-logo">Logo footer</a> <!-- Footer-logo som lenke -->
+        
+        <!-- Seksjon med generelle kontaktopplysninger og sosiale medier-ikoner -->
+        <section>
+            <h3>Generelt</h3>
+            <ul>
+                <!-- Liste med kontaktinformasjon og ikoner -->
+                <li><i class="fa-solid fa-location-dot"></i> Adresse</li>
+                <li><i class="fa-solid fa-envelope"></i> Epost</li>
+                <li><i class="fa-solid fa-phone"></i> Telefonnummer</li>
+            </ul>
+            <!-- Sosiale medier-ikoner for Facebook og Instagram -->
+            <ul id="some">
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-square-instagram"></i></li>
+            </ul>
+        </section>
+        
+        <!-- Seksjon med snarveier til andre sider -->
+        <section>
+            <h3>Snarveier</h3>
+            <ul>
+                <li>Tjenester</li>
+                <li>Jobber</li>
+                <li>Menneskene</li>
+                <li>Portfolio</li>
+                <li>Kontakt</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

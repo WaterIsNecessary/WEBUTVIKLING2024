@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Lagt til lang-attributt for å angi sidens språk som norsk (bokmål), noe som hjelper søkemotorer og skjermlesere med å tolke innholdet. -->
+<html lang="nb">
+	<head>
+		<!-- Setter tegnsett til UTF-8 for å sikre riktig visning av spesialtegn som æ, ø, og å -->
+		<meta charset="UTF-8">
+		<!-- Meta viewport for responsivt design, viktig for mobilvennlighet og dermed SEO -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Meta-beskrivelse som gir en kort oppsummering av sidens innhold, som vises i søkeresultater og forbedrer CTR (klikkrate) -->
+		<meta name="description" content="Lighthouse gir en omfattende rapport med konkrete forslag til optimaliseringer, inkludert forbedringer av mobilvennlighet, lastetid, tilgjengelighet og sikkerhet.">
+		<link href="font/css/all.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+		<link rel="stylesheet" href="gridstyle.css">
+		<!-- Tittel for siden, vises i nettleserfanen og i søkeresultater, viktig for SEO -->
+		<title>SEO analyse</title>
+	</head>
+	<body>
+		<script>
+		function mobilMenu(){
+			var x = document.getElementById("ham");
+
+			if(x.style.display === "block"){
+				x.style.display = "none";
+			}
+			
+			else {
+				x.style.display= "block";
+			}
+		}
+		</script>
+	<div id="grid-container">
+		<header id="page-header">
+			<h1>Søkemotoroptimalisering</h1>
+		</header>
+		<nav>
+			<!-- Bruk av <h2> for logo forbedrer struktur og tilgjengeklighet, fordi logo ikke bør være i <h1> -->
+			<h2>Logo</h2>
+			<i class="fas fa-hamburger" onclick="mobilMenu()"></i>
+			<ul id="ham" class="top-menu">
+				<!-- Alle <a>-elementer har href for å gjøre lenkene klikkbare, noe som forbedrer brukeropplevelse og SEO -->
+				<li><a href="#">Les mer om SEO</a></li>
+				<li><a href="#">Her finner du mer om Lighthouse</a></li>
+				<li><a href="#">Best practises for god SEO</a></li>
+				<!-- Dropdown-menyen har href på lenker for bedre navigasjon -->
+				<li class="dropdown-point"> 
+					<a href="#">Oblig 1</a>
+					<ul class="dropdown-main">
+						<li><a href="#">HTML-skjema</a></li>
+						<li><a href="#">Media typer</a></li>
+						<li><a href="#">CSS Layout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="main">
+			<article id="item-1">
+				<header>
+					<!-- Bruk av <h3> i artikkelen for hierarkisk struktur på overskrifter, noe som hjelper søkemotorer å tolke innholdet -->
+					<h3>Overskrift 1</h3>
+				</header>
+				<!-- <picture> med srcset for tilpassede bilder på ulike skjermstørrelser, noe som forbedrer lastetid og mobilvennlighet -->
+				<picture>
+					<source media="(min-width:650px)" srcset="https://picsum.photos/600/600" width="600" height="600">
+					<source media="(min-width:465px)" srcset="https://picsum.photos/400/400" width="400" height="400">
+					<!-- Alt-tekst beskriver bildet, noe som er viktig for SEO og tilgjengelighet -->
+					<img src="https://picsum.photos/200/200" alt="et bilde som sier mer enn 100 ord" width="200" height="200">
+				  </picture>
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a href="#">Les mer</a>
+			</article>
+			<article id="item-2">
+				<header>
+					<h3>Overskrift 2</h3>
+				</header>
+				<picture>
+					<source media="(min-width:650px)" srcset="https://picsum.photos/600/600" width="600" height="600">
+					<source media="(min-width:465px)" srcset="https://picsum.photos/400/400" width="400" height="400">
+					<img src="https://picsum.photos/200/200" alt="et bilde som sier mer enn 100 ord" width="200" height="200">
+				  </picture>
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a href="#">Les mer</a>
+			</article>
+			<article id="item-3">
+				<header>
+					<h3>Overskrift 3</h3>
+				</header>
+				<picture>
+					<source media="(min-width:650px)" srcset="https://picsum.photos/600/600" width="600" height="600">
+					<source media="(min-width:465px)" srcset="https://picsum.photos/400/400" width="400" height="400">
+					<img src="https://picsum.photos/200/200" alt="et bilde som sier mer enn 100 ord" width="200" height="200">
+				  </picture>
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a href="#">Les mer</a>
+			</article>
+			<article>
+				<header>
+					<h3>Overskrift 1</h3>
+				</header>
+				<picture>
+					<source media="(min-width:650px)" srcset="https://picsum.photos/600/600" width="600" height="600">
+					<source media="(min-width:465px)" srcset="https://picsum.photos/400/400" width="400" height="400">
+					<img src="https://picsum.photos/200/200" alt="et bilde som sier mer enn 100 ord" width="200" height="200">
+				  </picture>
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a href="#">Les mer</a>
+			</article>
+			<article>
+				<header>
+					<h3>Overskrift 2</h3>
+				</header>
+				<picture>
+					<source media="(min-width:650px)" srcset="https://picsum.photos/600/600" width="600" height="600">
+					<source media="(min-width:465px)" srcset="https://picsum.photos/400/400" width="400" height="400">
+					<img src="https://picsum.photos/200/200" alt="et bilde som sier mer enn 100 ord" width="200" height="200">
+				  </picture>
+				<p>
+					If you break the rules, try to leave or lose the game, you will die. Just like Saaaaw. Oh, wow. That's an intense line of questioning, Snuffles I'll tell you how I feel about school, Jerry. It's a waste of time.
+				</p>
+				<a href="#">Les mer</a>
+			</article>
+		</div>
+		<aside>
+			<!-- Bruk av <h4> for sidens innhold for riktig overskriftsnivå, som hjelper søkemotorer å tolke innholdets hierarki -->
+			<h4>Side innhold</h4>
+			<section id="rel-article">
+				<ul>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+				</ul>
+			</section>			
+			<section id="google-btn">
+				<!-- href lagt til for at knappen fungerer som en faktisk lenke -->
+				<a class="btn" href="#">Google</a>
+			</section>
+		</aside>
+		<footer>
+			Webutvikling 2024
+		</footer>
+	</div>
+	</body>
+</html>

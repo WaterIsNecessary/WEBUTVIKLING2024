@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Microdata - The Witcher</title>
+	<style>
+		main {
+			max-width: 900px;
+			width: 100%;
+		}
+
+		img {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Hovedseksjonen for informasjon om TV-serien "The Witcher", definert som en enhet av typen TVSeries -->
+	<main itemscope itemtype="https://schema.org/TVSeries">
+		<!-- Navn på TV-serien, spesifisert med itemprop="name" for å identifisere seriens tittel for søkemotorer -->
+		<h1 itemprop="name">The Witcher</h1>
+
+		<!-- Bilde av serien, definert med itemprop="image" slik at søkemotorer kan bruke dette som seriens representasjonsbilde -->
+		<img src="https://occ-0-1165-38.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABXH81uXzUNSVsIbZbV8eUidh4wf4mUXniE9hZb8926m7asXYaCh9XnjYuO4VSkZeJU_Nitzm8TotvouCYI15UIrX_tBp.jpg?r=2f0"
+			alt="Bilde fra tv-serien witcher" itemprop="image">
+
+		<!-- Lenke til hvor serien kan ses, definert med itemprop="url" for å gi søkemotorer en relasjon til visningsplattformen -->
+		<span>Bilde fra <a href="https://www.netflix.com/no/title/80189685" itemprop="url">Netflix</a></span>
+
+		<!-- Informasjon om skaperen av serien, definert som en Person-objekt under "creator" -->
+		<span>Creator: <span itemprop="creator" itemscope itemtype="https://schema.org/Person">
+				<!-- Navnet på skaperen, spesifisert som itemprop="name" for å identifisere personen som skapte serien -->
+				<span itemprop="name">Lauren Schmidt</span>
+			</span>
+		</span>
+
+		<!-- Beskrivelse av TV-serien, definert med itemprop="description" for å gi en kort oppsummering -->
+		<p itemprop="description">Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.</p>
+
+		<section>
+			<h5>Genre</h5>
+			<!-- Genre-listen spesifiseres med itemprop="genre" for å gi søkemotorer informasjon om sjangrene serien tilhører -->
+			<ul>
+				<li itemprop="genre">Action</li>
+				<li itemprop="genre">Adventure</li>
+				<li itemprop="genre">Fantasy</li>
+			</ul>
+		</section>
+
+		<section>
+			<h5>Stars</h5>
+			<!-- Liste over hovedrollene, definert som Person-objekter under "actor" for å identifisere skuespillerne i serien -->
+			<ul>
+				<li itemprop="actor" itemscope itemtype="https://schema.org/Person">
+					<!-- Navnet på skuespilleren, spesifisert som itemprop="name" -->
+					<span itemprop="name">Henry Cavill</span>
+				</li>
+				<li itemprop="actor" itemscope itemtype="https://schema.org/Person">
+					<span itemprop="name">Anna Shaffer</span>
+				</li>
+				<li itemprop="actor" itemscope itemtype="https://schema.org/Person">
+					<span itemprop="name">Freya Allen</span>
+				</li>
+			</ul>
+		</section>
+	</main>
+</body>
+
+</html>
